@@ -1,9 +1,8 @@
-import os
 from flask import Flask, request, jsonify
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 import time
+import os
 
 app = Flask(__name__)
 
@@ -15,8 +14,9 @@ def init_driver():
     chrome_options.add_argument("--headless")  # Ensure GUI is off
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.binary_location = "/opt/render/project/src/.chromedriver/bin/chromedriver"  # Correct the driver binary path for Render
 
-    driver_path = "/home/render/chromedriver"  # Render provides this path for the WebDriver
+    driver_path = "/opt/render/project/src/.chromedriver/bin/chromedriver"  # Correct driver binary path for Render
     driver = webdriver.Chrome(executable_path=driver_path, options=chrome_options)
 
 def start_recording(url):
