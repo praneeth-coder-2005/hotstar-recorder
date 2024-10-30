@@ -1,2 +1,1 @@
-web: python 
-hotstar_recorder.py
+web: python hotstar_recorder.py
