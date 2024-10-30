@@ -1,1 +1,1 @@
-web: python hotstar_recorder.py
+web: gunicorn hotstar_recorder:app
