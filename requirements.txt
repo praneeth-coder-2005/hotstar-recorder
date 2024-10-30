@@ -1,3 +1,2 @@
-   echo "Flask" >> requirements.txt
-   echo "selenium" >> requirements.txt
-   
+Flask
+selenium
