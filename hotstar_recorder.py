@@ -6,16 +6,20 @@ from selenium.webdriver.common.by import By
 
 app = Flask(__name__)
 
-@app.route('/start_recording')
+@app.route('/')  # This route handles requests to the root URL
+def home():
+    return "Welcome to the Hotstar Recorder!"
+
+@app.route('/start_recording')  # Route to start recording
 def start_recording():
-    # Your login and recording logic
-    print("Recording Started")  # Add real recording logic here
+    # Your login and recording logic (placeholder for now)
+    print("Recording Started")  # Replace with actual recording logic
     return "Recording Started"
 
-@app.route('/stop_recording')
+@app.route('/stop_recording')  # Route to stop recording
 def stop_recording():
-    # Code to stop the recording
-    print("Recording Stopped")  # Add real stopping logic here
+    # Code to stop the recording (placeholder for now)
+    print("Recording Stopped")  # Replace with actual stopping logic
     return "Recording Stopped"
 
 if __name__ == "__main__":
